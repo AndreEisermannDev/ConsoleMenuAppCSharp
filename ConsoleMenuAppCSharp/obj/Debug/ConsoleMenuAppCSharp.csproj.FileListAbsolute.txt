@@ -1,0 +1,8 @@
+C:\Users\Administrator\source\repos\GitHub\CSharpConsoleMenuApp\ConsoleMenuAppCSharp\ConsoleMenuAppCSharp\bin\Debug\ConsoleMenuAppCSharp.exe.config
+C:\Users\Administrator\source\repos\GitHub\CSharpConsoleMenuApp\ConsoleMenuAppCSharp\ConsoleMenuAppCSharp\bin\Debug\ConsoleMenuAppCSharp.exe
+C:\Users\Administrator\source\repos\GitHub\CSharpConsoleMenuApp\ConsoleMenuAppCSharp\ConsoleMenuAppCSharp\bin\Debug\ConsoleMenuAppCSharp.pdb
+C:\Users\Administrator\source\repos\GitHub\CSharpConsoleMenuApp\ConsoleMenuAppCSharp\ConsoleMenuAppCSharp\obj\Debug\ConsoleMenuAppCSharp.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\GitHub\CSharpConsoleMenuApp\ConsoleMenuAppCSharp\ConsoleMenuAppCSharp\obj\Debug\ConsoleMenuAppCSharp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Administrator\source\repos\GitHub\CSharpConsoleMenuApp\ConsoleMenuAppCSharp\ConsoleMenuAppCSharp\obj\Debug\ConsoleMenuAppCSharp.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\GitHub\CSharpConsoleMenuApp\ConsoleMenuAppCSharp\ConsoleMenuAppCSharp\obj\Debug\ConsoleMenuAppCSharp.exe
+C:\Users\Administrator\source\repos\GitHub\CSharpConsoleMenuApp\ConsoleMenuAppCSharp\ConsoleMenuAppCSharp\obj\Debug\ConsoleMenuAppCSharp.pdb
