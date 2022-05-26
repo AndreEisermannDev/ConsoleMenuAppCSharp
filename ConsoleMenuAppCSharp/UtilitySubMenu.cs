@@ -35,15 +35,41 @@ namespace ConsoleMenuAppCSharp
                     myGame.Start();
                     break;
             }
+        }
+        public void SimpleCalculator()
+        {
+            Console.Clear();
+            Console.WriteLine("Calculator");
+            
+            Console.WriteLine("\nEnter a number: ");
+            double userNumber1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("\n Enter an operator: (/ * + -)");
+            char userOperator = char.Parse(Console.ReadLine());
+            Console.WriteLine("\nEnter another number: ");
+            double userNumber2 = int.Parse(Console.ReadLine());
 
-            void SimpleCalculator()
+            double result = 0;
+            switch (userOperator)
             {
-                Console.Clear();
-                Console.WriteLine("Test");
-                Console.ReadLine();
-                UtilityStart();
-                Console.Clear();
+                case '/':
+                    result = userNumber1 / userNumber2;
+                    break;
+                case '*':
+                    result = userNumber1 * userNumber2;
+                    break;
+                case '-':
+                    result = userNumber1 - userNumber2;
+                    break;
+                case '+':
+                    result = userNumber1 + userNumber2;
+                    break;
             }
+            Console.WriteLine($"{userNumber1} {userOperator} {userNumber2} = {result}");
+            Console.WriteLine("\n(Enter to return to menu)");
+            Console.ReadLine();
+
+            UtilityStart(); //returning to previous menu
+            Console.Clear();
         }
     }
 }
