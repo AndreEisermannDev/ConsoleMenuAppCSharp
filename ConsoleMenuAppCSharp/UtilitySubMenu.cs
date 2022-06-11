@@ -20,10 +20,10 @@ namespace ConsoleMenuAppCSharp
                        |___/ 
 
 ";
-            string[] options = { "Simple Calculator", "Back to Main Menu" };
+            string[] options = { "Simple Calculator", "To-Do-List", "Back to Main Menu" };
 
-            MenuStructure gamesMenu = new MenuStructure(prompt, options);
-            int selectedIndex = gamesMenu.Run();
+            MenuStructure utilityMenu = new MenuStructure(prompt, options);
+            int selectedIndex = utilityMenu.Run();
 
             switch (selectedIndex)
             {
@@ -31,6 +31,10 @@ namespace ConsoleMenuAppCSharp
                     SimpleCalculator();
                     break;
                 case 1:
+                    ToDoList toDoApp = new ToDoList();
+                    toDoApp.ToDoListApp();
+                    break;
+                case 2:
                     MainMenu myGame = new MainMenu();
                     myGame.Start();
                     break;
@@ -71,6 +75,8 @@ namespace ConsoleMenuAppCSharp
             UtilityStart(); //returning to previous menu
             Console.Clear();
         }
+
+        
     }
 }
 
