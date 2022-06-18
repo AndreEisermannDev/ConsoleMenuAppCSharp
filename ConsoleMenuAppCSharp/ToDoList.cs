@@ -33,6 +33,7 @@ namespace ConsoleMenuAppCSharp
                     break;
                 case 2:
                     Console.WriteLine("Delete Task");
+                    ToDoFileRemoveMenu();
                     break;
                 case 3:
                     UtilitySubMenu utilMenu = new UtilitySubMenu();
@@ -61,7 +62,32 @@ namespace ConsoleMenuAppCSharp
         {
             string toDoFilePath = @"C:\Users\Administrator\source\repos\GitHub\ConsoleMenuAppCSharp\ConsoleMenuAppCSharp\ToDoListItems.txt";
             List<string> lines = File.ReadAllLines(toDoFilePath).ToList();
-            lines.Add($"{taskName}, {taskDate}");
+            lines.Add($"{taskName,20}, {taskDate}");
+            File.WriteAllLines(toDoFilePath, lines);
+        }
+
+        public void ToDoFileRemoveMenu()
+        {
+            string toDoFilePath = @"C:\Users\Administrator\source\repos\GitHub\ConsoleMenuAppCSharp\ConsoleMenuAppCSharp\ToDoListItems.txt";
+            int lineCount = Convert.ToInt32(File.ReadLines(toDoFilePath).Count());
+            List<string> lines = File.ReadAllLines(toDoFilePath).ToList();
+
+            string prompt = "Select an entry to delete";
+            string[] options = new string[lineCount];
+
+            int optionsIndex = 0;
+            foreach (string line in lines)
+            {
+                
+                options[optionsIndex] = line;
+                optionsIndex++;                    
+            }
+
+
+
+            MenuStructure toDoRemoveMenu = new MenuStructure(prompt, options);
+            int selectedIndex = toDoRemoveMenu.Run();
+            lines.RemoveAt(selectedIndex);
             File.WriteAllLines(toDoFilePath, lines);
         }
 
