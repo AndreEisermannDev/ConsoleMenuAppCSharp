@@ -26,10 +26,16 @@ namespace ConsoleMenuAppCSharp
                     Console.WriteLine("Add Task");
                     Console.WriteLine("Name the task: ");
                     string taskName = Console.ReadLine();
-                    Console.WriteLine("Enter a date when task should be completed (DD.MM.YYYY hh:mm:ss): ");
-                    DateTime taskDate = Convert.ToDateTime(Console.ReadLine());
-                    ToDoFileAdd(taskName, taskDate);
-                    Console.WriteLine($"added '{taskName}' due to {taskDate}");
+                    string dateInput = "";
+                    IsValidDateTime(dateInput);
+                    while (IsValidDateTime(dateInput) == false)
+                    {
+                        Console.WriteLine("Enter a date when task should be completed (DD.MM.YYYY hh:mm:ss): ");
+                        dateInput = Console.ReadLine();
+                    }
+                    DateTime validDate = Convert.ToDateTime(dateInput);
+                    ToDoFileAdd(taskName, validDate);
+                    Console.WriteLine($"added '{taskName}' due to {validDate}");
                     break;
                 case 2:
                     Console.WriteLine("Delete Task");
@@ -91,5 +97,10 @@ namespace ConsoleMenuAppCSharp
             File.WriteAllLines(toDoFilePath, lines);
         }
 
+        public static bool IsValidDateTime(string date)
+        {
+            DateTime tempDate;
+            return DateTime.TryParse(date, out tempDate);
+        }
     }
 }
