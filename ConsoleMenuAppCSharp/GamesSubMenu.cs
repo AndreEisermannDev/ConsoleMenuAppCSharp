@@ -63,7 +63,7 @@ Guess the number between 1 and 10: ";
                         Console.WriteLine("Please enter a valid input!");
                     }
 
-                    if (userGuess < randomNumber)
+                    if (userGuess < randomNumber && userGuess != 0)
                     {
 
                         Console.WriteLine("Your guess was too low.");
@@ -72,7 +72,7 @@ Guess the number between 1 and 10: ";
                     {
                         Console.WriteLine("Your guess was too high.");
                     }
-                    else
+                    else if (userGuess == randomNumber)
                     {
                         Console.WriteLine($"Correct! {userGuess} was the number.");
                     }
