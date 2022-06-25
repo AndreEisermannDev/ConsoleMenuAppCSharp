@@ -97,7 +97,7 @@ namespace ConsoleMenuAppCSharp
             File.WriteAllLines(toDoFilePath, lines);
         }
 
-        public static bool IsValidDateTime(string date)
+        public bool IsValidDateTime(string date)
         {
             DateTime tempDate;
             return DateTime.TryParse(date, out tempDate);
