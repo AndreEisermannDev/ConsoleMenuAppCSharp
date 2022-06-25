@@ -46,8 +46,7 @@ namespace ConsoleMenuAppCSharp
                     utilMenu.UtilityStart();
                     break;
             }
-            Console.WriteLine("\n(Enter to return to menu)");
-            Console.ReadLine();
+            toDoMenu.MenuReturn();
             ToDoListApp();
         }
 

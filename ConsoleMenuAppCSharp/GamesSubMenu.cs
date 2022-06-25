@@ -59,13 +59,11 @@ Guess the number between 1 and 10: ";
                     }
                     catch (FormatException)
                     {
-
                         Console.WriteLine("Please enter a valid input!");
                     }
 
                     if (userGuess < randomNumber && userGuess != 0)
                     {
-
                         Console.WriteLine("Your guess was too low.");
                     }
                     else if (userGuess > randomNumber)
@@ -77,8 +75,7 @@ Guess the number between 1 and 10: ";
                         Console.WriteLine($"Correct! {userGuess} was the number.");
                     }
                 } while (userGuess != randomNumber);
-                Console.WriteLine("\n(Enter to return to menu)");
-                Console.ReadLine();
+                gamesMenu.MenuReturn();
                 GamesMenuStart();
                 Console.Clear();
             }

@@ -78,6 +78,12 @@ namespace ConsoleMenuAppCSharp
             } while (keyPressed != ConsoleKey.Enter);
             return SelectedIndex;
         }
+
+        public void MenuReturn()
+        {
+            Console.WriteLine("\n(Enter to return to menu)");
+            Console.ReadLine();
+        }
     }
 }
 
